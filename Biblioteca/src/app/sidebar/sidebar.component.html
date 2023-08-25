@@ -1,0 +1,73 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+    <div class="header">
+      <h1 class="title">
+        UNAS
+      </h1>
+      <div class="chevron" (click)="handleSidebarToggle()">
+      </div>
+    </div>
+    <div class="content">
+      <div class="link">
+        <div class="content" [routerLink]="['/home']" [routerLinkActive]="'active'">
+          <div class="icon">
+            
+          </div>
+          <div class="title">Home</div>
+        </div>
+      </div>
+      <div class="link with-children">
+        <div class="content" [routerLink]="['/list']" [routerLinkActive]="'active'">
+          <div class="icon">
+                       
+          </div>
+          <div class="title">Solicitud de Libros</div>
+        </div>
+        <!-- <div class="children">
+          <div class="link">
+            <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '1' }"
+              [routerLinkActive]="'active'">
+              <div class="icon">
+                 Poner ICONO 
+              </div>
+              <div class="title">child 1</div>
+            </div>
+          </div>
+          <div class="link">
+            <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '2' }"
+              [routerLinkActive]="'active'">
+              <div class="icon">
+                 Poner ICONO 
+              </div>
+              <div class="title">child 2</div>
+            </div>
+          </div>
+          <div class="link">
+            <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '3' }"
+              [routerLinkActive]="'active'">
+              <div class="icon">
+                 Poner ICONO 
+              </div>
+              <div class="title">child 3</div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/AunFalta']" [routerLinkActive]="'active'">
+          <div class="icon">
+            <!-- Poner ICONO -->
+          </div>
+          <div class="title">Solicitud de Carnet</div>
+        </div>
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/AunFalta']" [routerLinkActive]="'active'">
+          <div class="icon">
+            <!-- Poner ICONO -->
+          </div>
+          <div class="title">Estado de Solicitud</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
