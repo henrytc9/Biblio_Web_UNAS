@@ -20,17 +20,17 @@ export class SliderComponent {
       autor: 'athor two',
     },
     {
-      imagen: '../../../assets/img/img_2.jpg',
+      imagen: '../../../assets/img/img_3.jpg',
       nombre: 'name two',
       autor: 'athor two',
     },
     {
-      imagen: '../../../assets/img/img_2.jpg',
+      imagen: '../../../assets/img/img_4.jpg',
       nombre: 'name two',
       autor: 'athor two',
     },
     {
-      imagen: '../../../assets/img/img_2.jpg',
+      imagen: '../../../assets/img/img_5.jpg',
       nombre: 'name two',
       autor: 'athor two',
     }

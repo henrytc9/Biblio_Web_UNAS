@@ -1,8 +1,8 @@
-<swiper-container class="mySwiper" pagination="false" effect="coverflow" 
-grab-cursor="true" centered-slides="false" slides-per-view="2" 
-coverflow-effect-rotate="0" coverflow-effect-stretch="500" 
+<swiper-container class="mySwiper" pagination="true" effect="coverflow" 
+grab-cursor="true" centered-slides="true" slides-per-view="2" 
+coverflow-effect-rotate="0" coverflow-effect-stretch="400" 
 coverflow-effect-depth="0" coverflow-effect-modifier="1" 
-coverflow-effect-slide-shadows="false">
+coverflow-effect-slide-shadows="flase">
     <div *ngFor="let item of items" class="swiper-slide">
       <div class="w-40 p-4 bg-slate-100 text-center">
         <img [src]="item.imagen" alt=".jpg">
