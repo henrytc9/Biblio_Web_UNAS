@@ -1,43 +1,74 @@
-<div class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-[#06345F]" [ngClass]="{ 'expanded': isExpanded }">
-    <div class="text-gray-100 text-xl">
-      <div class="p-2.5 mt-1 flex items-center">
-      <h1 class="font-bold text-gray-200 text-[15px] ml-3">
-        Biblioweb UNAS
-      </h1>
-      <div class="ml-20 cursor-pointer lg:hidden " (click)="handleSidebarToggle()"><mat-icon matSuffix>close</mat-icon></div>
-      </div>
-      
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+  <div class="header">
+    <h1 class="title">
+      UNAS
+    </h1>
+    <div class="toggle" (click)="handleSidebarToggle()">
+      <span class="chevron"></span>
     </div>
-
-
-        <div [routerLink]="['/home']" [routerLinkActive]="'active'">
-          <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white">
-            <mat-icon matSuffix>home</mat-icon>
-            <span class="text-[15px] ml-4 text-gray-200">Home</span>
+  </div>
+  <div class="content">
+    <div class="link">
+      <div class="content" [routerLink]="['/list']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>library_books</mat-icon>
+        </div>
+        <div class="title">Solicitud de Libros</div>
+      </div>
+    </div>
+    <div class="link">
+      <div class="content" [routerLink]="['/reserve']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>badge</mat-icon>
+        </div>
+        <div class="title">Solicitud de Carnets</div>
+      </div>
+    </div>
+    <!-- <div class="link with-children">
+      <div class="content" [routerLink]="['/configuration']" [routerLinkActive]="'active'">
+        <div class="icon">
+         
+        </div>
+        <div class="title">Configuration</div>
+      </div>
+      <div class="children">
+        <div class="link">
+          <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '1' }"
+            [routerLinkActive]="'active'">
+            <div class="icon">
+             
+            </div>
+            <div class="title">child 1</div>
           </div>
         </div>
-    
-        <div [routerLink]="['/list']" [routerLinkActive]="'active'">
-          <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white">
-            <mat-icon matSuffix>library_books</mat-icon>
-            <span class="text-[15px] ml-4 text-gray-200">Solicitud de Libros</span>
+        <div class="link">
+          <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '2' }"
+            [routerLinkActive]="'active'">
+            <div class="icon">
+           
+            </div>
+            <div class="title">child 2</div>
           </div>
         </div>
-     
-   
-        <div [routerLink]="['/reserve']" [routerLinkActive]="'active'">
-          <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white">
-            <mat-icon matSuffix>badge</mat-icon>
-            <span class="text-[15px] ml-4 text-gray-200">Solicitud de Carnets</span>
+        <div class="link">
+          <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '3' }"
+            [routerLinkActive]="'active'">
+            <div class="icon">
+         
+            </div>
+            <div class="title">child 3</div>
           </div>
         </div>
-      
-      
-        <div [routerLink]="['/suggest']" [routerLinkActive]="'active'">
-          <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white">
-            <mat-icon matSuffix>display_settings  </mat-icon>
-            <span class="text-[15px] ml-4 text-gray-200">Estados de Solicitud</span>
-          </div>
+      </div>
+    </div>  -->
+    <div class="link">
+      <div class="content" [routerLink]="['/suggest']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>display_settings</mat-icon>
         </div>
-
+        <div class="title">Estados de Solicitud</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
 </div>
