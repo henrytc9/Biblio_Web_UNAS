@@ -1,11 +1,12 @@
 <div class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-[#06345F]" [ngClass]="{ 'expanded': isExpanded }">
     <div class="text-gray-100 text-xl">
-      <div class="p-2.5 mt-1 flex items-center"></div>
+      <div class="p-2.5 mt-1 flex items-center">
       <h1 class="font-bold text-gray-200 text-[15px] ml-3">
-        UNAS
+        Biblioweb UNAS
       </h1>
-      <div class="" (click)="handleSidebarToggle()">
+      <div class="ml-20 cursor-pointer lg:hidden " (click)="handleSidebarToggle()"><mat-icon matSuffix>close</mat-icon></div>
       </div>
+      
     </div>
 
 
@@ -39,5 +40,4 @@
           </div>
         </div>
 
-    </div>
-    <div class="footer"></div>
+</div>
