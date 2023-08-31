@@ -12,11 +12,12 @@ import { SliderComponent } from './components/slider/slider.component';
 import { register } from 'swiper/element/bundle';
 import { HeaderComponent } from './components/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-// import { CardComponent } from './components/card/card.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 
@@ -39,11 +40,12 @@ register();
     BrowserModule,
     AppRoutingModule,
     MatSlideToggleModule,
-    // CardComponent,
+    BrowserAnimationsModule,
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],

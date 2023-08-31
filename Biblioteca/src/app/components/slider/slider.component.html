@@ -1,57 +1,14 @@
-<swiper-container pagination="false" effect="coverflow" 
+<swiper-container class="mySwiper" pagination="true" effect="coverflow" 
 grab-cursor="false" centered-slides="false" slides-per-view="2" 
-coverflow-effect-rotate="0" coverflow-effect-stretch="200" 
+coverflow-effect-rotate="0" coverflow-effect-stretch="400" 
 coverflow-effect-depth="200" coverflow-effect-modifier="1" 
-coverflow-effect-slide-shadows="false" [navigation]="false" [pagination]="{clickable: true}" class="bg-slate-400 w-[64rem]">
-  <swiper-slide> 
-  
-    <div class="w-40 p-4 bg-slate-100 text-center">
-      <img src="../../../assets/img/img_1.jpg" alt=".jpg">
-      <p class="text-lg leading-none font-serif">Hasta que el verano se acabe</p> 
-      <p class="pt-2 font-serif text-sm leading-none text-zinc-400 text-start">- Connor Hamilton</p>
-      <button class="rounded-full hover:bg-[#06345F] hover:text-zinc-300 text-sm border-2 border-[#06345F] p-2 px-4 mt-2 text-[#06345F]">Reservar</button>
+coverflow-effect-slide-shadows="false">
+    <div *ngFor="let item of items" class="swiper-slide">
+      <div class="w-40 p-4 bg-slate-100 text-center">
+        <img [src]="item.imagen" alt=".jpg">
+        <p class="text-lg leading-none font-serif">{{ item.nombre }}</p> 
+        <p class="pt-2 font-serif text-sm leading-none text-zinc-400 text-start">{{ item.autor }}</p>
+        <button class="rounded-full hover:bg-[#06345F] hover:text-zinc-300 text-sm border-2 border-[#06345F] p-2 px-4 mt-2 text-[#06345F]">Reservar</button>
+      </div>
     </div>
-  
-  </swiper-slide>
-  <swiper-slide>
-
-    <div class="w-40 p-4 bg-slate-100 text-center">
-      <img src="../../../assets/img/img_2.jpg" alt=".jpg">
-      <p class="text-lg leading-none font-serif">Hasta que el verano se acabe</p> 
-      <p class="pt-2 font-serif text-sm leading-none text-zinc-400 text-start">- Connor Hamilton</p>
-      <button class="rounded-full hover:bg-[#06345F] hover:text-zinc-300 text-sm border-2 border-[#06345F] p-2 px-4 mt-2 text-[#06345F]">Reservar</button>
-    </div>
-
-  </swiper-slide>
-  <swiper-slide>
-
-    <div class="w-40 p-4 bg-slate-100 text-center">
-      <img src="../../../assets/img/img_3.jpg" alt=".jpg">
-      <p class="text-lg leading-none font-serif">Hasta que el verano se acabe</p> 
-      <p class="pt-2 font-serif text-sm leading-none text-zinc-400 text-start">- Connor Hamilton</p>
-      <button class="rounded-full hover:bg-[#06345F] hover:text-zinc-300 text-sm border-2 border-[#06345F] p-2 px-4 mt-2 text-[#06345F]">Reservar</button>
-    </div>
-
-  </swiper-slide>
-  <swiper-slide>
-
-    <div class="w-40 p-4 bg-slate-100 text-center">
-      <img src="../../../assets/img/img_4.jpg" alt=".jpg">
-      <p class="text-lg leading-none font-serif">Hasta que el verano se acabe</p> 
-      <p class="pt-2 font-serif text-sm leading-none text-zinc-400 text-start">- Connor Hamilton</p>
-      <button class="rounded-full hover:bg-[#06345F] hover:text-zinc-300 text-sm border-2 border-[#06345F] p-2 px-4 mt-2 text-[#06345F]">Reservar</button>
-    </div>
-
-  </swiper-slide>
-  <swiper-slide>
-
-    <div class="w-40 p-4 bg-slate-100 text-center">
-      <img src="../../../assets/img/img_5.jpg" alt=".jpg">
-      <p class="text-lg leading-none font-serif">Hasta que el verano se acabe</p> 
-      <p class="pt-2 font-serif text-sm leading-none text-zinc-400 text-start">- Connor Hamilton</p>
-      <button class="rounded-full hover:bg-[#06345F] hover:text-zinc-300 text-sm border-2 border-[#06345F] p-2 px-4 mt-2 text-[#06345F]">Reservar</button>
-    </div>
-
-  </swiper-slide>
-  <swiper-slide></swiper-slide> 
 </swiper-container>
