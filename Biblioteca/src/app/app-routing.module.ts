@@ -7,11 +7,7 @@ import { SuggestComponent } from './suggest/suggest.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: 'home',
     component: HomeComponent,
@@ -27,6 +23,10 @@ const routes: Routes = [
   {
     path: 'suggest',
     component: SuggestComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
 
