@@ -19,7 +19,12 @@ import { LoginComponent } from './login/login.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SwitchLanguagesComponent } from './components/switch-languages/switch-languages.component';
 
 register();
 
@@ -33,7 +38,8 @@ register();
     SidebarComponent,
     SliderComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    SwitchLanguagesComponent
     
   ],
   imports: [
@@ -45,10 +51,22 @@ register();
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttLoaderFactory,
+        deps: [ HttpClient ]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
+
+export function HttLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http, './assets/languages/', '.json');
+}
