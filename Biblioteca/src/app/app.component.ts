@@ -14,7 +14,7 @@ export class AppComponent {
     this.translate.addLangs(['en', 'es']);
     const lang = this.translate.getBrowserLang();
     if(lang != 'en' && lang != 'es') {
-      this.translate.setDefaultLang('en');
+      this.translate.setDefaultLang('es');
     } else {
       this.translate.use(lang);
     }
