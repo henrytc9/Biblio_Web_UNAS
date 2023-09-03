@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import Swiper from 'swiper';
+import Swiper from 'swiper';
 
 
 @Component({
@@ -33,20 +33,32 @@ export class SliderComponent {
       imagen: '../../../assets/img/img_5.jpg',
       nombre: 'name two',
       autor: 'athor two',
+    },
+    {
+      imagen: '../../../assets/img/img_5.jpg',
+      nombre: 'name two',
+      autor: 'athor two',
     }
   ];
 
   
-  // ngOnInit(): void {
-  //   // Inicialización de Swiper
-  //   const mySwiper = new Swiper('.swiper-container', {
-  //     // Opciones de Swiper
-  //     // pagination: {
-  //     //   clickable: true,
-  //     // },
-  //     slidesPerView: 2,
-  //     // ... otras opciones
-  //   });
-  // }
+  ngOnInit(): void {
+    const mySwiper = new Swiper('.swiper-container', {
+      
+      initialSlide: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 400,
+        depth: 0,
+        modifier: 1,
+        slideShadows: false
+      }
+    });
+  }
   
 }

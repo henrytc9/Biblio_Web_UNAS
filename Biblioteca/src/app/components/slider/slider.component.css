@@ -1,4 +1,4 @@
-@import "/node_modules/swiper/swiper-bundle.css";
+/* @import "/node_modules/swiper/swiper-bundle.css";
 
 html,
 body {
@@ -13,14 +13,14 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-}
+} */
 
-swiper-container {
+/* swiper-container {
   width: 80rem;
   height: 100%;
-}
+} */
 
-swiper-slide {
+/* swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -34,4 +34,4 @@ swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
