@@ -38,6 +38,11 @@ export class SliderComponent {
       imagen: '../../../assets/img/img_5.jpg',
       nombre: 'name two',
       autor: 'athor two',
+    },
+    {
+      imagen: '../../../assets/img/img_5.jpg',
+      nombre: 'name two',
+      autor: 'athor two',
     }
   ];
 
@@ -57,6 +62,23 @@ export class SliderComponent {
         depth: 0,
         modifier: 1,
         slideShadows: false
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        }
       }
     });
   }
