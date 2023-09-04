@@ -1,1 +1,48 @@
-<span>KEVIN trabajando...</span>
+<div class="fixed inset-0 flex items-center justify-center z-50" *ngIf="!showConfirmationModal">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-2/3 space-y-4">
+      <h2 class="text-2xl font-semibold">Datos para la solicitud de Carnet:</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block">Apellidos:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Marcelo Luyo"/>
+        </div>
+        <div>
+          <label class="block">Nombres:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Jhimi Misael"/>
+        </div>
+        <div>
+          <label class="block">Correo:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="jhimi.marcelo@unas.edu.pe"/>
+        </div>
+        <div>
+          <label class="block">Cargo:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Estudiante"/>
+        </div>
+        <div>
+          <label class="block">Facultad:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Ing. Informática y Sistemas"/>
+        </div>
+        <div>
+          <label class="block">Fecha de Nacimiento:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="10/04/2005"/>
+        </div>
+        <div>
+          <label class="block">Nro de Celular:</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="987654321"/>
+        </div>
+        <div>
+          <label class="block">Adjuntar Boleta de Pago:</label>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-4">
+        <button (click)="handleSubmit()" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400">
+          Enviar
+        </button>
+        <button (click)="closeModal()" class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-400">
+          Cerrar
+        </button>        
+      </div>
+    </div>
+    <app-confirmacion-modal *ngIf="showConfirmationModal"></app-confirmacion-modal>
+  </div>
+  

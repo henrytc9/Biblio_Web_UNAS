@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './reserve.component.html',
   styleUrls: ['./reserve.component.css']
 })
-export class ReserveComponent {
 
+export class ReserveComponent {
+  showConfirmationModal = false;
+  handleSubmit() {
+    this.showConfirmationModal = true;
+  }
+  closeModal() {
+    this.showConfirmationModal = true;
+  }
 }
