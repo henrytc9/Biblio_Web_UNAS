@@ -17,9 +17,8 @@
       >
         {{ "BUTTONS.SEARCH" | translate }}
       </button>
-      <button
-        class="mx-2 bg-[#06345F] text-white w-20 h-10 rounded-full hover:bg-white hover:text-[#06345F] border hover:border-blue-900"
-      >
+      <button mat-flat-button (click)="OpenSuggest()" 
+      class="mx-2 bg-[#06345F] text-white w-20 h-10 rounded-full hover:bg-white hover:text-[#06345F] border hover:border-blue-900">
         {{ "BUTTONS.SUGGETS" | translate }}
       </button>
     </div>

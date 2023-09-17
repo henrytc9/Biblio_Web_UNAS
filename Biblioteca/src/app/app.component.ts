@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core'
+import { AlertServise } from './components/services/alert.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,14 @@ import { TranslateService } from '@ngx-translate/core'
 export class AppComponent {
   title = 'biblio_web';
   sidebarExpanded = true;
-  constructor(private translate: TranslateService) {
+  showAlert = false;
+  message = '';
+
+  constructor(
+    private translate: TranslateService,
+    private alertService: AlertServise
+    
+    ) {
     this.translate.addLangs(['en', 'es']);
     const lang = this.translate.getBrowserLang();
     if(lang != 'en' && lang != 'es') {
@@ -18,5 +26,13 @@ export class AppComponent {
     } else {
       this.translate.use(lang);
     }
+    this.alertService.alert$.subscribe( (res: any) => {
+      this.message = res.message;
+      this.showAlert = true;
+      setTimeout(() => {
+        this.showAlert = false
+      }, res.time);
+    })
   }
+
 }

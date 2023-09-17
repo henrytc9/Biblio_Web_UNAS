@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatButtonModule} from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
@@ -18,13 +19,15 @@ import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
+import { FormsModule } from '@angular/forms';
+import { MatTooltipModule} from '@angular/material/tooltip'
+import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SwitchLanguagesComponent } from './components/switch-languages/switch-languages.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 register();
 
@@ -48,10 +51,15 @@ register();
     MatSlideToggleModule,
     BrowserAnimationsModule,
     MatInputModule,
+    FormsModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule,
     MatCardModule,
+    MatTooltipModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
+    MatSelectModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
