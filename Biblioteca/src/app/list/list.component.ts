@@ -13,11 +13,11 @@ export class ListComponent{
 
   }
 
-
   OpenSuggest() {
     const searchModal = this._dialog.open(SuggestComponent, {
       disableClose: true,
     });
     searchModal.beforeClosed();
   }
+ 
 }

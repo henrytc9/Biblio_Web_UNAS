@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import Swiper from 'swiper';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ReserveComponent } from '../../reserve/reserve.component';
 
 @Component({
   selector: 'app-slider',
@@ -8,6 +9,17 @@ import Swiper from 'swiper';
   styleUrls: ['./slider.component.css'],
 })
 export class SliderComponent {
+
+  constructor(public _dialog: MatDialog,) {
+  }
+  
+  OpenReserve() {
+    const searchModal = this._dialog.open(ReserveComponent, {
+      disableClose: true,
+    });
+    searchModal.beforeClosed();
+  }
+
   items = [
     {
       imagen: '../../../assets/img/img_1.jpg',
@@ -81,6 +93,6 @@ export class SliderComponent {
         }
       }
     });
-  }
-  
+  } 
+
 }
