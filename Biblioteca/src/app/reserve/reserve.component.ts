@@ -38,4 +38,15 @@ export class ReserveComponent {
       this._dialogRef.close();
     }
   }
+
+  libro = {
+    urlImagen: '../assets/img/img_1.jpg',
+    disponible: true,
+    titulo: 'Programación para principiantes',
+    autor: 'Alexander Cane',
+    area: 'Informática',
+    codigo: 'LIB0001UNAS',
+    edicion: 'Primera edición',
+    fechaReserva: '01/01/2023' 
+  };
 }
