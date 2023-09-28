@@ -22,40 +22,135 @@ export class SliderComponent {
 
   items = [
     {
-      imagen: '../../../assets/img/img_1.jpg',
-      nombre: 'name one',
-      autor: 'author one',
+      subtitulo: "Vistos recientemente",
+      libro: [
+
+        {
+          imagen: '../../../assets/img/img_1.jpg',
+          nombre: 'name one',
+          autor: 'author one',
+        },
+        {
+          imagen: '../../../assets/img/img_2.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_3.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_4.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        }
+
+      ],
+     
     },
     {
-      imagen: '../../../assets/img/img_2.jpg',
-      nombre: 'name two',
-      autor: 'athor two',
+      subtitulo: "Nuevas adquisiciones",
+      libro: [
+
+        {
+          imagen: '../../../assets/img/img_1.jpg',
+          nombre: 'name one',
+          autor: 'author one',
+        },
+        {
+          imagen: '../../../assets/img/img_2.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_3.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_4.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        }
+
+      ],
+     
     },
     {
-      imagen: '../../../assets/img/img_3.jpg',
-      nombre: 'name two',
-      autor: 'athor two',
-    },
-    {
-      imagen: '../../../assets/img/img_4.jpg',
-      nombre: 'name two',
-      autor: 'athor two',
-    },
-    {
-      imagen: '../../../assets/img/img_5.jpg',
-      nombre: 'name two',
-      autor: 'athor two',
-    },
-    {
-      imagen: '../../../assets/img/img_5.jpg',
-      nombre: 'name two',
-      autor: 'athor two',
-    },
-    {
-      imagen: '../../../assets/img/img_5.jpg',
-      nombre: 'name two',
-      autor: 'athor two',
+      subtitulo: "Los más solicitados",
+      libro: [
+
+        {
+          imagen: '../../../assets/img/img_1.jpg',
+          nombre: 'name one',
+          autor: 'author one',
+        },
+        {
+          imagen: '../../../assets/img/img_2.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_3.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_4.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        },
+        {
+          imagen: '../../../assets/img/img_5.jpg',
+          nombre: 'name two',
+          autor: 'athor two',
+        }
+
+      ],
+     
     }
+    
   ];
 
   
