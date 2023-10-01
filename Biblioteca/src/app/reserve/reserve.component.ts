@@ -22,10 +22,12 @@ export class ReserveComponent {
   ) {
 
     this.formReserve = this._fb.group({
-      title: ['', Validators.required],
-      author: ['', Validators.required],
-      area: ['', Validators.required],
-      details: ['']
+      title: ['Programacion', Validators.required],
+      author: ['Alexander Cane', Validators.required],
+      area: ['Informática', Validators.required],
+      codigoLibro: ['xsxs',Validators.required],
+      fechaReserva: ['',Validators.required],
+      state: ['Disponiblle', Validators.required]
     });
 
   }

@@ -132,10 +132,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cdk@^16.2.1", "@angular/cdk@16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-16.2.1.tgz"
-  integrity sha512-rRVdAdfuQ34Eq7na/q2SIO6Me2p/rtU2zeQOW6wrNf6KJfWSTbU6RvNw09cDygAQLp/WmwQvWLhkjWNWGDSf0w==
+"@angular/cdk@^16.2.1", "@angular/cdk@16.2.6":
+  version "16.2.6"
+  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-16.2.6.tgz"
+  integrity sha512-vSaPs69xutbxc6IbZz4I5fMzZhlypsMg5JKKNAufmyYNNHQYgSQytpUd1/RxHhPF/JoEvj/J8QjauRriZFN+SA==
   dependencies:
     tslib "^2.3.0"
   optionalDependencies:
@@ -207,10 +207,17 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/material@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@angular/material/-/material-16.2.1.tgz"
-  integrity sha512-WwjKgYBkZA9EUEOMEFR00ZMFXPs9xLOca3+8njEs/SyeqE0p02H5cnjAaekQfUkcxhwFz1WfJMftI01ODS/S5A==
+"@angular/material-moment-adapter@^16.2.6":
+  version "16.2.6"
+  resolved "https://registry.npmjs.org/@angular/material-moment-adapter/-/material-moment-adapter-16.2.6.tgz"
+  integrity sha512-lV+eUp1PVHU2BU+RMAxHqQTwUelOA9go/0t/hFGDVhF9eTGZyzl6CnWgmksPjQCnZTrW3Pb1BhqsizcjLfh1Gw==
+  dependencies:
+    tslib "^2.3.0"
+
+"@angular/material@^16.2.1", "@angular/material@16.2.6":
+  version "16.2.6"
+  resolved "https://registry.npmjs.org/@angular/material/-/material-16.2.6.tgz"
+  integrity sha512-JFP12dLrsKwrQ4zZtSRJarYosnxikxLD2M9hfUtHVxgTJr7rdSQ8eE7G2l2zPALSUt+d44MWgQ79xu6inuvEOw==
   dependencies:
     "@material/animation" "15.0.0-canary.bc9ae6c9c.0"
     "@material/auto-init" "15.0.0-canary.bc9ae6c9c.0"
@@ -5253,6 +5260,11 @@ mkdirp@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
+moment@^2.18.1, moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 mrmime@1.0.1:
   version "1.0.1"

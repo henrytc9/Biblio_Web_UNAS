@@ -27,7 +27,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SwitchLanguagesComponent } from './components/switch-languages/switch-languages.component';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
 
 register();
 
@@ -56,6 +57,8 @@ register();
     MatButtonModule,
     MatDialogModule,
     MatCardModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
     MatTooltipModule,
     ReactiveFormsModule,
     MatFormFieldModule,
