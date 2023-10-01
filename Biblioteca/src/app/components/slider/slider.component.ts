@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import Swiper from 'swiper';
 import { MatDialog } from '@angular/material/dialog';
 import { ReserveComponent } from '../../reserve/reserve.component';
-import { ApiService } from 'src/app/service/api.service';
+import { ApiService } from 'src/app/components/services/api.service';
 
 @Component({
   selector: 'app-slider',
