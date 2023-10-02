@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 import { MatDialog } from '@angular/material/dialog';
 import { ReserveComponent } from '../../reserve/reserve.component';
 import { ApiService } from 'src/app/components/services/api.service';
+import { modalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-slider',
@@ -13,10 +14,15 @@ export class SliderComponent {
 
   data: any [] = [];
 
-  constructor(public _dialog: MatDialog, private apiService: ApiService) {
+  constructor(public _dialog: MatDialog, private apiService: ApiService, private serviceModal: modalService) {
   }
   
-  OpenReserve() {
+  OpenReserve(libro: any) {
+
+    this.serviceModal.enviaInfo.emit({
+      Data: libro
+    });  
+
     const searchModal = this._dialog.open(ReserveComponent, {
       disableClose: true,
     });
@@ -30,7 +36,7 @@ export class SliderComponent {
   llenatData(){
     this.apiService.getData().subscribe(data => {
       this.data = data;
-      console.log(data);
+      // console.log(data);
       
     })
   }

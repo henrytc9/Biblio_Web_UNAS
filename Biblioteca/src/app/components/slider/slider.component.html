@@ -6,7 +6,7 @@
           <img class="w-20" [src]="libro.urlImg" alt=".jpg">
           <p class="text-sm leading-none font-serif">{{ libro.nombre }}</p> 
           <p class="pt-2 font-serif text-xs leading-none text-zinc-400">{{ libro.autor }}</p>
-          <button mat-flat-button (click)="OpenReserve()" 
+          <button mat-flat-button (click)="OpenReserve(libro)" 
           class ="rounded-full hover:bg-[#06345F] text-xs hover:text-zinc-300 border-2 border-[#06345F] p-1 px-3 mt-2 text-[#06345F]">{{ 'BUTTONS.RESERVE' | translate}}</button>
         </div>
       </div>

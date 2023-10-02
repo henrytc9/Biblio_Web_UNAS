@@ -15,10 +15,10 @@
       <div class="flex flex-col ">
         <div class="m-4" style="line-height: 1;">
           <div class="m-4">
-            <img class="w-40" [src]="libro.urlImagen" alt=".jpg">
+            <img class="w-40" [src]="formReserve.value.urlImagen" alt=".jpg">
           </div>
           <div class="m-4 ">
-            <span>{{ libro.disponible ? 'Disponible' : 'No disponible' }}</span>
+            <span>{{ formReserve.value.state }}</span>
           </div>
         </div>
       </div>

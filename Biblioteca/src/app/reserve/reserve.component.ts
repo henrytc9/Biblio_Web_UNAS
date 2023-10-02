@@ -3,6 +3,7 @@ import { MatDialogRef} from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertServise } from '../components/services/alert.service';
 import { SliderComponent } from '../components/slider/slider.component';
+import { modalService } from '../components/services/modal.service';
 
 @Component({
   selector: 'app-reserve',
@@ -18,7 +19,8 @@ export class ReserveComponent {
   constructor(
     public _dialogRef: MatDialogRef<SliderComponent>,
     private _fb: FormBuilder,
-    private alertService: AlertServise
+    private alertService: AlertServise,
+    private serviceModal: modalService
   ) {
 
     this.formReserve = this._fb.group({
@@ -27,11 +29,22 @@ export class ReserveComponent {
       area: ['Informática', Validators.required],
       codigoLibro: ['xsxs',Validators.required],
       fechaReserva: ['',Validators.required],
-      state: ['Disponiblle', Validators.required]
+      state: ['Disponiblle', Validators.required],
+      urlImagen: ['../assets/img/img_1.jpg'],
     });
 
   }
 
+  public nuevaData: any [] = [];
+
+  ngOnInit(): void {
+    this.serviceModal.enviaInfo.subscribe(data => {
+      console.log(data);
+      this.nuevaData.push(data);
+      console.log(this.nuevaData);
+    })
+  } 
+  
   sendReserve(){
     if(this.formReserve.invalid){
       this.status=false;
@@ -42,7 +55,7 @@ export class ReserveComponent {
   }
 
   libro = {
-    urlImagen: '../assets/img/img_1.jpg',
+  
     disponible: true,
     titulo: 'Programación para principiantes',
     autor: 'Alexander Cane',

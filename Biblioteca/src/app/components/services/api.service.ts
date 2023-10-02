@@ -3,18 +3,15 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
+  private urlApi =
+    'http://servicio-biblioteca-unas.rj.r.appspot.com/genius/api/documento/todo';
 
-private urlApi = 'http://servicio-biblioteca-unas.rj.r.appspot.com/genius/api/documento/todo';
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) {
-
-   }
-
-   public getData(): Observable<any>{
+  public getData(): Observable<any> {
     return this.http.get<any>(this.urlApi);
-   }
-
+  }
 }
