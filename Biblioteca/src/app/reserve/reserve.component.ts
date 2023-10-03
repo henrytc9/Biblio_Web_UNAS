@@ -34,13 +34,13 @@ export class ReserveComponent {
   ) {
 
     this.formReserve = this._fb.group({
-      title: [this.area, Validators.required],
-      author: [this.autor, Validators.required],
-      area: [this.area, Validators.required],
-      codigoLibro: [this.codigo, Validators.required],
-      fechaReserva: [this.cantidad, Validators.required],
-      state: [this.tipo_documento, Validators.required],
-      urlImagen: [this.urlImg],
+      title: ['Programacion', Validators.required],
+      author: ['Alexander Cane', Validators.required],
+      area: ['Informática', Validators.required],
+      codigoLibro: ['xsxs', Validators.required],
+      fechaReserva: ['', Validators.required],
+      state: ['Disponiblle', Validators.required],
+      urlImagen: ['../assets/img/img_1.jpg'],
     });
 
   }
