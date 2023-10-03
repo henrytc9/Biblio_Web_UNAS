@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import Swiper from 'swiper';
 import { MatDialog } from '@angular/material/dialog';
 import { ReserveComponent } from '../../reserve/reserve.component';
@@ -10,7 +10,7 @@ import { modalService } from '../services/modal.service';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
 })
-export class SliderComponent {
+export class SliderComponent implements OnInit {
 
   data: any [] = [];
 
@@ -36,7 +36,7 @@ export class SliderComponent {
   llenatData(){
     this.apiService.getData().subscribe(data => {
       this.data = data;
-      // console.log(data);
+      //console.log();
       
     })
   }

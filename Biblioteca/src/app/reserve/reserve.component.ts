@@ -16,6 +16,16 @@ export class ReserveComponent {
   formReserve: FormGroup;
   status = true;
 
+  // Declarar las variables aquí para que estén disponibles en todo el componente
+  area: string = '';
+  autor: string = '';
+  cantidad: number = 0;
+  codigo: string = '';
+  idDocumento: number = 0;
+  nombre: string = '';
+  tipo_documento: string = '';
+  urlImg: string = '';
+
   constructor(
     public _dialogRef: MatDialogRef<SliderComponent>,
     private _fb: FormBuilder,
@@ -24,25 +34,43 @@ export class ReserveComponent {
   ) {
 
     this.formReserve = this._fb.group({
-      title: ['Programacion', Validators.required],
-      author: ['Alexander Cane', Validators.required],
-      area: ['Informática', Validators.required],
-      codigoLibro: ['xsxs',Validators.required],
-      fechaReserva: ['',Validators.required],
-      state: ['Disponiblle', Validators.required],
-      urlImagen: ['../assets/img/img_1.jpg'],
+      title: [this.area, Validators.required],
+      author: [this.autor, Validators.required],
+      area: [this.area, Validators.required],
+      codigoLibro: [this.codigo, Validators.required],
+      fechaReserva: [this.cantidad, Validators.required],
+      state: [this.tipo_documento, Validators.required],
+      urlImagen: [this.urlImg],
     });
 
   }
 
-  public nuevaData: any [] = [];
+  public nuevaData: Array<any> =[];
 
   ngOnInit(): void {
-    this.serviceModal.enviaInfo.subscribe(data => {
-      console.log(data);
-      this.nuevaData.push(data);
+    this.serviceModal.enviaInfo.subscribe(Data => {
+      this.nuevaData.push(Data);
       console.log(this.nuevaData);
+
+      // Extraer las variables del último objeto agregado a nuevaData
+      const ultimoObjeto = this.nuevaData[this.nuevaData.length - 1];
+  
+      if (ultimoObjeto && ultimoObjeto.Data) {
+        this.area = ultimoObjeto.Data.area;
+        this.autor = ultimoObjeto.Data.autor;
+        this.cantidad = ultimoObjeto.Data.cantidad;
+        this.codigo = ultimoObjeto.Data.codigo;
+        this.idDocumento = ultimoObjeto.Data.idDocumento;
+        this.nombre = ultimoObjeto.Data.nombre;
+        this.tipo_documento = ultimoObjeto.Data.tipo_documento;
+        this.urlImg = ultimoObjeto.Data.urlImg;
+        console.log('Esta es area: ', this.area);
+  
+        // Ahora, las variables contienen los valores del último objeto agregado a nuevaData
+        console.log("Variables extraídas:", this.area, this.autor, this.cantidad, this.codigo, this.idDocumento, this.nombre, this.tipo_documento, this.urlImg);
+      }
     })
+
   } 
   
   sendReserve(){
@@ -54,14 +82,4 @@ export class ReserveComponent {
     }
   }
 
-  libro = {
-  
-    disponible: true,
-    titulo: 'Programación para principiantes',
-    autor: 'Alexander Cane',
-    area: 'Informática',
-    codigo: 'LIB0001UNAS',
-    edicion: 'Primera edición',
-    fechaReserva: '01/01/2023' 
-  };
 }
