@@ -29,6 +29,8 @@ import { SwitchLanguagesComponent } from './components/switch-languages/switch-l
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
+import { StateComponent } from './state/state.component';
+import {MatTableModule} from '@angular/material/table';
 
 register();
 
@@ -43,7 +45,8 @@ register();
     SliderComponent,
     HeaderComponent,
     LoginComponent,
-    SwitchLanguagesComponent
+    SwitchLanguagesComponent,
+    StateComponent
     
   ],
   imports: [
@@ -53,6 +56,7 @@ register();
     BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
+    MatTableModule,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,

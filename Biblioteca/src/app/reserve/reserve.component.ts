@@ -39,7 +39,7 @@ export class ReserveComponent {
       area: ['Informática', Validators.required],
       codigoLibro: ['xsxs', Validators.required],
       fechaReserva: ['', Validators.required],
-      state: ['Disponiblle', Validators.required],
+      state: ['Disponible', Validators.required],
       urlImagen: ['../assets/img/img_1.jpg'],
     });
 
