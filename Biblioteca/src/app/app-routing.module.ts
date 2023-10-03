@@ -5,6 +5,7 @@ import { ListComponent } from './list/list.component';
 import { ReserveComponent } from './reserve/reserve.component';
 import { SuggestComponent } from './suggest/suggest.component';
 import { LoginComponent } from './login/login.component';
+import { StateComponent } from './state/state.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'state',
+    component: StateComponent,
   },
 ];
 
